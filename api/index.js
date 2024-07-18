@@ -24,8 +24,35 @@ app.use(cors(options));
 
 
 app.get('/api',(req,res)=>{
-  //res.send("Hola mi server esta funcionando con express");
-  res.sendFile(path.join(__dirname,'index.html'));
+  res.send(`
+      <div>
+    <p>¿Que puedes hacer en este backend?</p>
+    <p>
+      Revisa los enpoints:
+      <br><br>
+
+      GET (browser/postman/insonmia/thunder):<br>
+      /api/v1/products/<br>
+      /api/v1/products/{valid_uuid}<br>
+      /api/v1/users?limit=10&offset=11 /* by now use any number for limit and offset, this endpoint has not been worked yet*/
+
+      <br><br>
+      POST (postman/insonmia/thunder):<br
+      /api/v1/products/ <br>
+        - send body { "name" : "productname", "price": 1000, "image": "imageuri" }
+
+      <br><br>
+      PATCH/UPDATE (postman/insonmia/thunder):<br>
+      /api/v1/products/{valid_uuid}
+
+      <br><br>
+      DELETE (postman/insonmia/thunder):<br>
+      /api/v1/products/{valid_uuid}
+
+    </p>
+  </div>
+    `);
+  //res.sendFile(path.join(__dirname,'index.html'));
 })
 
 routerApi(app);
