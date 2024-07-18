@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const port = 3000;
-const routerApi = require('./routes/index');
+const routerApi = require('./api/routes/index');
 const path = require('path');
 
-const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler')
+const { logErrors, errorHandler, boomErrorHandler } = require('./api/middlewares/error.handler')
 
 app.use(express.json());
 
@@ -23,7 +23,7 @@ const options = {
 app.use(cors(options));
 
 
-app.get('/api',(req,res)=>{
+app.get('/',(req,res)=>{
   res.send(`
       <div>
     <p>¿Que puedes hacer en este backend?</p>
