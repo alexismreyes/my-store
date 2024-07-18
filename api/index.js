@@ -25,7 +25,7 @@ app.use(cors(options));
 
 app.get('/api',(req,res)=>{
   //res.send("Hola mi server esta funcionando con express");
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname,'api','index.html'));
 })
 
 routerApi(app);
