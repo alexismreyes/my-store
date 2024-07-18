@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div>
+    Soy un proyecto backend de NODE.js, de momento estas en una simple vista principal
+  </div>
+  <div>
+    <p>Que puedes hacer en este backend?</p>
+    <p>
+      Revisa los enpoints:
+      <br><br>
+
+      GET (browser/postman/insonmia/thunder):<br>
+      /api/v1/products/<br>
+      /api/v1/products/{valid_uuid}<br>
+      /api/v1/users?limit=10&offset=11 /* by now use any number for limit and offset, this endpoint has not been worked yet*/
+
+      <br><br>
+      POST (postman/insonmia/thunder):<br
+      /api/v1/products/ <br>
+        - send body { "name" : "productname", "price": 1000, "image": "imageuri" }
+
+      <br><br>
+      PATCH/UPDATE (postman/insonmia/thunder):<br>
+      /api/v1/products/{valid_uuid}
+
+      <br><br>
+      DELETE (postman/insonmia/thunder):<br>
+      /api/v1/products/{valid_uuid}
+
+    </p>
+  </div>
+
+
+</body>
+</html>
