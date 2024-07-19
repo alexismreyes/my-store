@@ -26,9 +26,9 @@ app.use(cors(options));
 app.get('/',(req,res)=>{
   res.send(`
       <div>
-    <p>¿Que puedes hacer en este backend?</p>
+    <p><h1>ESTE ES UN PROYECTO BACKEND</h1></p>
     <p>
-      Revisa los enpoints:
+      Utiliza los endpoints listados a continuación para interactuar con este backend:
       <br><br>
 
       GET (browser/postman/insonmia/thunder):<br>
